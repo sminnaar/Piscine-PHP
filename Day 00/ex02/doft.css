@@ -124,7 +124,7 @@ html, body{
   .green{
     display:inline-block;
     background-color: #88ff89;
-    width:36%;
+    width:37%;
     height:auto;
     z-index: 4;
     margin-top:-5%;
@@ -147,12 +147,12 @@ html, body{
   #italic{
     font-style: italic;
   }
-  #ordinateur{
+  #ordinateurs{
     text-shadow:6px 6px 5.5px red;
   }
   #respond{
-    background-color: rgb(214, 214, 214);
-    border-color: rgb(80, 80, 80);
+    background-color: white;
+    border-color: #0808080;
     border: 1px solid;
     border-style:none;
     height: 10%;
