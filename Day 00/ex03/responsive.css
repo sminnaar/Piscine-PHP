@@ -30,18 +30,21 @@
   {
     text-align:center;
     font-size: 2vw;
+    color: black;
   }
 
   .atomic-number
   {
     vertical-align:bottom;
     font-size: 1vw;
+    color: black;
   }
 
   .mass
   {
     text-align:right;
     font-size: 1vw;
+    color: black;
   }
 
   p
