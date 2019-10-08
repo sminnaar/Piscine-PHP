@@ -1,3 +1,17 @@
 h1{
-    
+    font-display: 40vw;
+    text-align: center;
+    text-decoration: black;
+    color: black;
+
 }
+body{
+    background-size: 120%;
+    background-repeat: "false";
+    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190322-ham-sandwich-horizontal-1553721016.png?crop=0.668xw:1.00xh;0.168xw,0&resize=768:*)
+}
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    text-align: center;
+  }
