@@ -1,6 +1,10 @@
 #!/usr/bin/php
 <?php
-    $out = explode(" ", $argv[1]);
-    echo $out;
-
+if ($argc == 2)
+{
+    $out = preg_replace('/\s+/', ' ', trim($argv[1]));
+    echo("$out\n");
+}
+else
+    exit;
 ?>
