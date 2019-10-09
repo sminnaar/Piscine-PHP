@@ -1,12 +1,4 @@
 #!/usr/bin/php
 <?php
-    $i = 0;
-    while ($i < 999)
-    {
-        echo "X";
-        $i++;
-        if ($i == 99)
-        break ;
-    }
-    echo "\n";
+    echo str_repeat("X", 1000). "\n";
 ?>
