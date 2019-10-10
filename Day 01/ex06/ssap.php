@@ -4,7 +4,7 @@
     if ($argc == 1)
         exit;
     $in = implode(" ", $argv);
-    $out = explode(" ", $in);
+    $out = preg_split('/\s+/', $in);
     unset($out[0]);
     sort($out);
     while ($out[$i] != NULL)
