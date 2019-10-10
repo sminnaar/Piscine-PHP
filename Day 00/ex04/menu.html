@@ -6,22 +6,63 @@
 </head>
 <body>
     <h1>SNCF Sandwitch menu</h1>
-    <div class="custom-select">
-            <select>
-              <option value="0">Select Sandwitch:</option>
-              <option value="1">BLT</option>
-              <option value="2">Roast Beef and Onion</option>
-              <option value="3">Salad</option>
-              <option value="4">Crumed Chicken Peperdew</option>
-              <option value="5">Ham and Cheese</option>
-              <option value="6">Butter Marmite and Cheese</option>
-              <option value="7">Cheese and Tomato</option>
-              <option value="8">Bullshit and Lies</option>
-              <option value="9">Bacon Egg and Cheese</option>
-              <option value="10">Dagwood</option>
-              <option value="11">Veggie</option>
-              <option value="12">Vegan</option>
-            </select>
-          </div> 
+    <div class="nav">
+      <input type="checkbox" id="menu"/>
+      <lable for="menu">&#9776Select Sandwitch</lable>
+
+      <div class="multi-level">
+          <div class="item">
+                <input type="checkbox" id="A"<label for="A">BLT</label>
+
+                <ul>
+                    <li><div class="sub-item">
+                      <input type="checkbox" id="A-A"/>
+                      <lable for="A-A">Add-On's</lable>
+                        <ul>
+                          <input type="checkbox" id="A-A-A"/><label for="A-A-A">White Bread</label>
+                          <input type="checkbox" id="A-A-B"/>
+                          <label for="A-A-B">Brown Bread</label>
+                          <input type="checkbox" id="A-A-C"/>
+                          <label for="A-A-C">No Mayo</label>
+                        </ul>
+                    </li>
+                </ul>
+          </div>
+          <div class="item">
+              <input type="checkbox" id="A"/>
+              <label for="A">Roast Beef and Onion</label>
+
+              <ul>
+                  <li><div class="sub-item">
+                    <input type="checkbox" id="A-A"/>
+                    <lable for="A-A">Add-On's</lable>
+                      <ul>
+                        <li>White Bread</li>
+                        <li>Brown Bread</li>
+                        <li>No Mayo</li>
+                      </ul>
+                  </li>
+              </ul>
+        </div>
+      </div>
+           
+    </div> 
 </body>
 </html>
+
+<img src="https://cdn.pixabay.com/photo/2016/09/05/10/50/app-1646212_960_720.png" class="arrow">
+<!-- <select>
+    <option value="0">Select Sandwitch:</option>
+    <option value="1">BLT</option>
+    <option value="2">Roast Beef and Onion</option>
+    <option value="3">Salad</option>
+    <option value="4">Crumed Chicken Peperdew</option>
+    <option value="5">Ham and Cheese</option>
+    <option value="6">Butter Marmite and Cheese</option>
+    <option value="7">Cheese and Tomato</option>
+    <option value="8">Bullshit and Lies</option>
+    <option value="9">Bacon Egg and Cheese</option>
+    <option value="10">Dagwood</option>
+    <option value="11">Veggie</option>
+    <option value="12">Vegan</option>
+  </select> -->
