@@ -6,13 +6,14 @@
     }
     if ($_GET["action"] == "get")
     {
-        echo "Your Cookie name: ".$_COOKIE[$_GET["name"]];
         if ((strlen($_COOKIE[$_GET["name"]]) > 0))
-            echo "\r\n";
+        {
+            echo "Your Cookie name: ".$_COOKIE[$_GET["name"]];
+        }
         else
-            echo "";
+            echo "Cookie was deleted";
     }
-    if ($_GET["action"] == "delete")
+    if ($_GET["action"] == "del")
     {
         setcookie($_GET["name"], $_GET["value"], time() + 3600, "/");
         echo ("Your Cookie has been deleted\n");
