@@ -15,7 +15,7 @@
     }
     if ($_GET["action"] == "del")
     {
-        setcookie($_GET["name"], $_GET["value"], time() + 3600, "/");
+        setcookie($_GET["name"], "", time() + 3600, "/");
         echo ("Your Cookie has been deleted\n");
     }
 ?>
