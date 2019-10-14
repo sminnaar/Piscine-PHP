@@ -1,5 +1,5 @@
 <?php
-    if ($_POST['submit'] !== "OK" || !$_POST['login'] || !$_POST['oldpw'] === hash("sha512", ($oldpw = $_POST['oldpw'])))
+    if ($_POST['submit'] !== "OK" || !$_POST['login'] || !$_POST['passwd'])
     {
         echo "ERROR\n";
         echo "Please enter valid Username and Password\n";
@@ -19,7 +19,7 @@
         {
             foreach ($user_array as $usr_pass_pair)
             {
-                if ($usr_pass_pair['login'] === $login) //&& $usr_pass_pair['passwd'] === $hpass )
+                if ($usr_pass_pair['login'] === $login)
                 {
                     echo "ERROR\n";
                     echo "User already exists\n";
