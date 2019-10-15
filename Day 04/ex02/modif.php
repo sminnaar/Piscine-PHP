@@ -8,7 +8,6 @@
             echo "Enter Old Password\n";
         if (!$_POST['newpw'])
             echo "Enter New Password\n";
-        print_r($user_array);
         return ;
     }
     else
@@ -21,25 +20,21 @@
         {
             echo "ERROR\n";
             echo "Create an account first\n";
-            print_r($user_array);
             return ;            
         }
         $user_array = unserialize(file_get_contents("../private/passwd"));
-
-        $i = 0;
         if ($user_array)
         {
             foreach ($user_array as $usr_pass_pair)
             {
                 if ($usr_pass_pair['login'] === $login && $usr_pass_pair['passwd'] === $usr['oldpw'])
                 {
-                    $user_array[$i]['passwd'] = $usr['newpw'];
+                    $usr_pass_pair['passwd'] = $usr['newpw'];
                     file_put_contents("../private/passwd", serialize($user_array));
                     echo "OK\n";
                     echo "Password Updated\n";
                     return ;
                 }
-                $i++;
             }
         }
         echo "ERROR\n";
