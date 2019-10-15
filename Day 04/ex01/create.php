@@ -3,7 +3,6 @@
     {
         echo "ERROR\n";
         echo "Please enter valid Username and Password\n";
-        print_r($user_array);
         return ;
     }
     else
@@ -23,7 +22,6 @@
                 {
                     echo "ERROR\n";
                     echo "User already exists\n";
-                    print_r($user_array);
                     return ;
                 }
             }
@@ -32,5 +30,4 @@
         file_put_contents("../private/passwd", serialize($user_array));
         echo "OK\n";
     }
-    print_r($user_array);
 ?>

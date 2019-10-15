@@ -37,7 +37,6 @@
                     file_put_contents("../private/passwd", serialize($user_array));
                     echo "OK\n";
                     echo "Password Updated\n";
-                    print_r($user_array);
                     return ;
                 }
                 $i++;
@@ -45,5 +44,4 @@
         }
         echo "ERROR\n";
     }
-    print_r($user_array);
 ?>
