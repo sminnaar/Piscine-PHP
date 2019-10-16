@@ -13,9 +13,13 @@
     else
     {
         $usr['login'] = $login = $_POST['login'];
-        $usr['oldpw'] = $hpassold = hash("sha512", ($passwd = $_POST['oldpw']));
-        $usr['newpw'] = $hpassnew = hash("sha512", ($passwd = $_POST['newpw']));
-
+        $hpassold = hash("sha512", ($passwd = $_POST['oldpw']));
+        $hpassnew = hash("sha512", ($passwd = $_POST['newpw']));
+        if ($hpassnew === $hpassold)
+        {
+            echo "ERROR\n";
+            echo "Passwords can not match\n";
+        }
         if (file_exists("../private/passwd") === FALSE)
         {
             echo "ERROR\n";
@@ -27,16 +31,19 @@
         {
             foreach ($user_array as $usr_pass_pair)
             {
-                if ($usr_pass_pair['login'] === $login && $usr_pass_pair['passwd'] === $usr['oldpw'])
+                if ($usr_pass_pair['login'] === $login && $usr_pass_pair['passwd'] === $hpassold)
                 {
-                    $usr_pass_pair['passwd'] = $usr['newpw'];
-                    file_put_contents("../private/passwd", serialize($user_array));
+                    $usr_pass_pair['passwd'] = $hpassnew;
+                    file_put_contents("../private/passwd", serialize($usr_pass_pair));
                     echo "OK\n";
                     echo "Password Updated\n";
                     return ;
                 }
             }
         }
-        echo "ERROR\n";
+        else
+        {
+            echo "ERROR\n";
+        }
     }
 ?>
